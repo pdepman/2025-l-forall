@@ -42,15 +42,15 @@ seLlevanBien(Persona1, Persona2) :-
     not(puedeDarleOrdenes(Persona1,Persona2)),
     not(puedeDarleOrdenes(Persona2,Persona1)).
 
-%-begin_tests(puedeDarleOrdenes).
+:-begin_tests(puedeDarleOrdenes).
 % Son 3 clases de equivalencia. El nombre de la clase de equivalencia es el nombre del test:
 test(mismoDeptoYEsPuestoSuperiorPuedeDarOrdenes):-
-    puedeDarleOrdenes(maria,nora). % representan la clase de equivalencia
-test(mismoDeptoYEsPuestoNoEsSuperiorNoPuedeDarOrdenes):-
-    puedeDarleOrdenes(nora, maria).
-test(distintoDeptoAunqueSeaSuperiorNoPuedeDarOrdenes):-
+    puedeDarleOrdenes(maria,roque). % representan la clase de equivalencia
+test(mismoDeptoYEsPuestoNoEsSuperiorNoPuedeDarOrdenes, fail):-
+    puedeDarleOrdenes(roque, maria).
+test(distintoDeptoAunqueSeaSuperiorNoPuedeDarOrdenes, fail):-
     puedeDarleOrdenes(hugo,juan).
-%:-end_tests(puedeDarleOrdenes).
+:-end_tests(puedeDarleOrdenes).
 
 
 
